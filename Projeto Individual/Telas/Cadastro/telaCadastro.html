@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo, Nakama!</title>
+    <link rel="stylesheet" href="telaCadastro.css">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/icone aba.png" class="icone">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="outtest_site.css">
+
+    <style>
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+         <img src="../assets/freepik-modern-minimalist-healthy-food-restaurant-logo-20240929232453cwc6.png" alt="">
+        </div>
+         <a href="../Site institucional/index.html">HOME</a>
+         <a href="#sobre">SOBRE</a>
+         <a href="#servicos">SERVIÇOS</a>
+         <a href="../PETCALCULO/calculadora.html">PETCÁLCULO</a>
+         <a href="../LOGIN/LOGINPETCARE.html">LOGIN</a>
+         <a href="../Cadastro/cadastro.html"><span>CADASTRO</span></a>
+       
+     </header>
+ 
+
+
+    <div class="container">
+        <div><img src="../assets/gatopixeladofinal.png" alt=""></div>
+        <div class="painel">
+            <b>
+                <h1 class="tituloMugiwara">Venha ser um Mugiwara!</h1>
+            </b>
+           
+            
+       
+
+            <span>Nome:</span>
+            <input class="input_cadastro" type="text" placeholder="Digite o seu nome">
+            <div class="nome_validar" id="div_cep"></div>
+
+            <span>Email:</span>
+            <input oninput="email()" id="input_email"class="input_cadastro"  type="text" placeholder="Digite seu email">
+            <div class="email_validar" id="div_email"></div>
+
+            <span>Senha:</span>
+            <input oninput="analisar()" id="input_senha" class="input_cadastro" type="password" placeholder="Digite sua senha">
+            <div class="mensagem" id="div_mensagem"></div>
+
+            <span>Confrme sua senha:</span>
+            <input oninput="confirmar()" id="confirmar_senha" class="input_cadastro" type="password"
+                placeholder="Confirme sua senha">
+            <div class="confirmar_senha" id="confirmar_mensagem"></div>
+
+            <br>
+            <button onclick="cadastrar()" class="botao">Cadastrar</button>
+            <div class="cadastro_link">
+                Tem uma conta?<a href="../LOGIN/LOGINPETCARE.html"><br><b>Inicie sessão</b></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="icone">
+            <img src="../assets/instagram.png" alt="">
+            <img src="../assets/facebook.png" alt="">
+            <img src="../assets/twitter.png" alt="">
+        </div>
+        <div class="icone">
+            <img src="../assets/icons8-carta-37 (1).png" alt="">
+           
+            <p>petcare@sptech.school</p>
+        </div>
+        <div class="icone">
+            <a href="https://wa.me/5511998508868" target="_blank">
+                <img src="../assets/zap.png" alt="">
+            </a>
+            <p>(11) 99850-8868</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script>
+
+    function analisar() {
+
+        var senha = input_senha.value
+        var mensagem = ' '
+        var tamanho_senha = senha.length
+        var confirmar = confirmar_senha.value
+        var temexclama = senha.includes('!');
+        var temarroba = senha.includes('@');
+        var temhash = senha.includes('#');
+        var temcifrao = senha.includes('$');
+        var temporcen = senha.includes('%');
+        var temchapeu = senha.includes('^');
+        var temezao = senha.includes('&');
+        var temaster = senha.includes('*');
+        var temparentum = senha.includes('(');
+        var temparentois = senha.includes(')');
+        var temvirgula = senha.includes(',');
+        var temponto = senha.includes('.');
+        var teminterrogacao = senha.includes('?');
+        var temaspas = senha.includes('"');
+        var temigual = senha.includes(':');
+        var temcolcheteum = senha.includes('{');
+        var temcolchetedois = senha.includes('}');
+        var tembarrao = senha.includes('|');
+        var temmenorque = senha.includes('<');
+        var temmaiorque = senha.includes('>');
+        var ESPECIAIS = (temexclama || temarroba || temhash || temcifrao || temporcen || temchapeu
+        ||   temezao || temaster || temparentum || temparentois || temvirgula || temponto || teminterrogacao ||
+         temaspas || temigual || temcolcheteum || temcolchetedois || tembarrao || temmenorque || temmaiorque
+        )
+        var Maius = senha.toUpperCase();
+        var Minus = senha.toLowerCase();
+        var temminuscula = senha != Maius;
+        var temmaiuscula = senha != Minus;
+
+
+
+        if (tamanho_senha >= 8 && ESPECIAIS && temmaiuscula && temminuscula) {
+            mensagem += `A senha é forte`
+            div_mensagem.style.color = 'green'
+        } else {
+            mensagem += `A senha deve ter pelo menos 8 caracteres, letra maiúscula e minúscula e um caractere especial.`
+            div_mensagem.style.color = 'red'
+        }
+
+        div_mensagem.innerHTML = mensagem
+    }
+
+    function confirmar() {
+    var senha = input_senha.value;
+    var confirmar = confirmar_senha.value;
+    var mensagem = ''; 
+
+    if (senha === confirmar && senha.length > 0) {
+        mensagem = `Senhas coincidem`; 
+        confirmar_mensagem.style.color = 'green';
+    } else if (senha.length > 0) {
+        mensagem = `Senhas devem ser iguais`; 
+        confirmar_mensagem.style.color = 'red';
+    } else {
+        mensagem = ''; 
+    }
+
+    confirmar_mensagem.innerHTML = mensagem;
+}
+
+
+    function email() {
+        var mensagem = ' '
+        var email = input_email.value
+        var email_com = email.endsWith('.com')
+        var email_br = email.endsWith('.br')
+        var email_school = email.endsWith('school')
+        var arroba = email.includes('@')
+
+        if ((email_br || email_com || email_school) && arroba) {
+            mensagem += `Email Válido`
+            div_email.style.color = 'green'
+        } else {
+            mensagem += `Email Inválido`
+            div_email.style.color = 'red'
+        }
+
+        div_email.innerHTML = mensagem
+
+    }
+</script>
