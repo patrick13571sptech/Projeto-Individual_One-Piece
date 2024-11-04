@@ -55,7 +55,7 @@ body{
     border: 3px solid #e20000; 
     box-shadow: 0 0 10px #ffffff;  
     margin-bottom: 10px;
-    margin-right: 50%;
+    margin-right: 600px
 
  }
 
@@ -68,7 +68,12 @@ body{
 .cadastro_link a {
     text-decoration: none;
     font-weight: normal; 
-    color: rgb(163, 84, 236);
+    color: rgb(240, 0, 0);
+}
+.cadastro_link2 {
+    text-decoration: none;
+    font-weight: normal; 
+    color: rgb(150, 146, 31)
 }
 .cadastro_link a:hover {
     color: rgb(100, 226, 226);
@@ -114,7 +119,7 @@ body{
     border: 0;
     border-radius: 15px;
     color: #ffffff;
-    background-color: rgb(163, 84, 236);
+    background-color: rgb(150, 146, 31);
     font-weight: 700;
     font-size: 18px;
     align-self: center;
