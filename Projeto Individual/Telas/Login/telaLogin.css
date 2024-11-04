@@ -1,6 +1,6 @@
 body{
-    font-size: 2px 200px !important;
-    background: linear-gradient(260deg, #B3EFFF 0%, #4cb9eb 100%);
+    font-size: 2px 50px !important;
+    background-image:url(../Assets/ZoroLuffy.jpg) ;
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
@@ -23,7 +23,6 @@ body{
 }
 
 .login{
-
     height: 100vh;
     display: flex; 
     justify-content: center;
@@ -33,27 +32,31 @@ body{
 
  .container{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-self: center;
     align-items: center;
+
     height: 100%;
     width: 100%;
  
  }
 
  .card{
+    display: flex;
     height: 450px;
     width: 450px;   
     background-color: #fff;
-    border-radius: 30px;
-    display: flex;
+    border-radius: 10px;
     flex-direction: column;
     align-items: center;
-    color: rgb(163, 84, 236);
-    padding: 20px 25px 0px 25px;
-    border: 1px solid #A354EC; 
-    box-shadow: 0 0 10px #A354EC !important;  
-    margin-bottom: 230px;
-    margin-right: 10%;
+    align-self: center;
+    color: rgb(179, 0, 0);
+    padding: 10px 10px 0px 25px;
+    border: 3px solid #e20000; 
+    box-shadow: 0 0 10px #ffffff;  
+    margin-bottom: 10px;
+    margin-right: 50%;
+
  }
 
 .cadastro_link {
@@ -77,7 +80,7 @@ body{
     width: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     cursor: url('cursor\ pointer.png'), auto !important; 
 }
 
@@ -138,16 +141,16 @@ body{
 }
 
 footer {
-    /* background-color: rgb(106, 245, 245); */
-    background: linear-gradient(180deg, #B3EFFF 0%, #4cb9eb 100%);
-
-    width: 98.5%;
-    height: 90px;
+    
+    background: linear-gradient(180deg, #000000 0%, #000000 100%);
+    color: black;
+    width: 99.5%;
+    height: 30px;
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    filter: drop-shadow(0 8px 20px rgba(8, 99, 91, 0.5));
-    margin-top: -70px;
+    justify-content: space-evenly;
+    padding: 5px;
+    margin-top: 100px;
+    position: absolute;
 }
 
 footer img{
