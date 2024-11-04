@@ -22,48 +22,6 @@ body{
     }
 }
 
-
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 150px;
-        margin-bottom: 40px;
-        
-    }
-    
-    header a span {
-        color: rgb(163, 84, 236);
-    }
-    header  img {
-        height: 300px; 
-        margin-top: -50px;
-        filter: drop-shadow(0 8px 20px rgba(46, 45, 45, 0.5));
-        margin-right: -10px;
-       
-    }
-    
-    
-    header a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 15px;
-        font-weight: 800;
-        border-bottom: 2px solid rgb(163, 84, 236);
-        cursor: url('cursor\ pointer.png'), auto !important; 
-        filter: drop-shadow(0px 0px 10px rgba(6, 69, 105, 0.5));
-        
-    }
-  
-    
-   
-    header a:hover {
-        font-size: 20px;
-        transition: all 0.5s ease-in-out;
-        color: rgb(163, 84, 236);
-    }
-    
-
 .login{
 
     height: 100vh;
