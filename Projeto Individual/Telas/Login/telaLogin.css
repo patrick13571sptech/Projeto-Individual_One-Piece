@@ -1,0 +1,258 @@
+body{
+    font-size: 2px 200px !important;
+    background: linear-gradient(260deg, #B3EFFF 0%, #4cb9eb 100%);
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    width: 100%;
+    cursor: url('cursor\ normal.png'), auto;
+    animation: fadeInLeftBig 1.4s ease-in-out;
+    
+}
+
+@keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 150px;
+        margin-bottom: 40px;
+        
+    }
+    
+    header a span {
+        color: rgb(163, 84, 236);
+    }
+    header  img {
+        height: 300px; 
+        margin-top: -50px;
+        filter: drop-shadow(0 8px 20px rgba(46, 45, 45, 0.5));
+        margin-right: -10px;
+       
+    }
+    
+    
+    header a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 800;
+        border-bottom: 2px solid rgb(163, 84, 236);
+        cursor: url('cursor\ pointer.png'), auto !important; 
+        filter: drop-shadow(0px 0px 10px rgba(6, 69, 105, 0.5));
+        
+    }
+  
+    
+   
+    header a:hover {
+        font-size: 20px;
+        transition: all 0.5s ease-in-out;
+        color: rgb(163, 84, 236);
+    }
+    
+
+.login{
+
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+ .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+ 
+ }
+
+ .card{
+    height: 450px;
+    width: 450px;   
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(163, 84, 236);
+    padding: 20px 25px 0px 25px;
+    border: 1px solid #A354EC; 
+    box-shadow: 0 0 10px #A354EC !important;  
+    margin-bottom: 230px;
+    margin-right: 10%;
+ }
+
+.cadastro_link {
+   
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+.cadastro_link a {
+    text-decoration: none;
+    font-weight: normal; 
+    color: rgb(163, 84, 236);
+}
+.cadastro_link a:hover {
+    color: rgb(100, 226, 226);
+    font-weight: normal; 
+}
+
+.formulario{
+    height: 80%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: url('cursor\ pointer.png'), auto !important; 
+}
+
+.formulario span{
+
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.formulario input{
+
+    border: 2px solid rgb(106, 245, 245);
+    text-align: center;
+    border-radius: 15px;
+    margin: 5px;
+    height: 20px;
+    width: 100%;
+
+}
+
+.campo{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.botao{
+
+    cursor: pointer;
+    border: 0;
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: rgb(163, 84, 236);
+    font-weight: 700;
+    font-size: 18px;
+    align-self: center;
+    /* margin-top: -45px; */
+     height: 40px;
+    width: 140px;
+    cursor: url('cursor\ pointer.png'), auto !important; 
+}
+
+.card h2{
+
+    margin: 0;
+    font-size: 30px;
+
+}
+
+.imagemC img {
+    margin-top: -200px;
+    height: 500px; 
+    width: 700px ; 
+    object-fit: contain;
+    padding: -50%;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.5));
+}
+
+footer {
+    /* background-color: rgb(106, 245, 245); */
+    background: linear-gradient(180deg, #B3EFFF 0%, #4cb9eb 100%);
+
+    width: 98.5%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    filter: drop-shadow(0 8px 20px rgba(8, 99, 91, 0.5));
+    margin-top: -70px;
+}
+
+footer img{
+    height: 30px;
+    width: 30px;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+}
+
+.icone img {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.icone p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container .input-icon {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.input-container input {
+    padding-left: 40px; 
+    border: 2px solid rgb(106, 245, 245);
+    text-align: left; 
+    border-radius: 15px;
+    margin: 10px 0;
+    height: 40px;
+    width: 100%;
+}
+
+#senha_input::placeholder {
+    transform: translateY(5px); 
+}
+
+
+.input-invalido {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
