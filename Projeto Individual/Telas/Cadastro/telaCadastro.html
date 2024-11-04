@@ -41,8 +41,8 @@
        
 
             <span>Nome:</span>
-            <input class="input_cadastro" type="text" placeholder="Digite o seu nome">
-            <div class="nome_validar" id="div_cep"></div>
+            <input oninput="nome()" id="ipt_nome"class="input_cadastro" type="text" placeholder="Digite o seu nome">
+            <div class="nome_validar" id="input_nome"></div>
 
             <span>Email:</span>
             <input oninput="email()" id="input_email"class="input_cadastro"  type="text" placeholder="Digite seu email">
@@ -88,7 +88,7 @@
 <script>
 
     function analisar() {
-
+        var nome = ipt_nome.value
         var senha = input_senha.value
         var mensagem = ' '
         var tamanho_senha = senha.length
@@ -117,13 +117,13 @@
         ||   temezao || temaster || temparentum || temparentois || temvirgula || temponto || teminterrogacao ||
          temaspas || temigual || temcolcheteum || temcolchetedois || tembarrao || temmenorque || temmaiorque
         )
-        var Maius = senha.toUpperCase();
-        var Minus = senha.toLowerCase();
-        var temminuscula = senha != Maius;
-        var temmaiuscula = senha != Minus;
+        var maius = senha.toUpperCase();
+        var minus = senha.toLowerCase();
+        var temminuscula = senha != maius;
+        var temmaiuscula = senha != minus;
 
-
-
+        
+        
         if (tamanho_senha >= 8 && ESPECIAIS && temmaiuscula && temminuscula) {
             mensagem += `A senha é forte`
             div_mensagem.style.color = 'green'
@@ -133,6 +133,22 @@
         }
 
         div_mensagem.innerHTML = mensagem
+    }
+
+    function nome(){
+
+        var nome = ipt_nome.value;
+        var mensagem = "";
+
+        if (nome.length < 2){
+            mensagem+= `Seu nome precisa ter ao menos 2 caracteres! :)`
+            input_nome.style.color = 'red'
+        } else {
+            mensagem+= `Nome válido!`
+            input_nome.style.color = 'green'
+        }
+
+        input_nome.innerHTML = mensagem;
     }
 
     function confirmar() {
