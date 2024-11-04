@@ -1,12 +1,13 @@
 body {
     
-    background: linear-gradient(260deg, #d72c2c 0%, #96a237 100%);
+    background-image: url(../Assets/thefuturekingofpiratescrew.png);
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
     height: 100%;
     cursor: url('cursor\ normal.png'), auto;
     animation: fadeInLeftBig 1.4s ease-in-out;
+
 }
 
 @keyframes fadeInLeftBig {
@@ -25,8 +26,10 @@ body {
     justify-content: center;
     align-items: flex-start;
     margin: 200px auto;
+    margin-top: 400px;
     margin-left: 0%;
     width: 100%;
+   
     /* padding: 5px 0px 0px; */
 }
 
@@ -66,78 +69,32 @@ div img {
     text-align: center;
 }
 
-
-
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 150px;
-    margin-bottom: 40px;
-
-}
-header a span {
-    color: rgb(163, 84, 236);
-}
-
-header img {
-    height: 300px;
-    margin-top: -50px;
-    filter: drop-shadow(0 8px 20px rgba(46, 45, 45, 0.5));
-    margin-right: -10px;
-}
-
-header a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 800;
-    border-bottom: 2px solid rgb(163, 84, 236);
-    cursor: url('cursor\ pointer.png'), auto !important;
-    filter: drop-shadow(0px 0px 10px rgba(6, 69, 105, 0.5));
-
-}
-
-header a span {
-    color: rgb(163, 84, 236);
-}
-
-header a span:hover {
-    color: #fff;
-
-}
-
-header a:hover {
-    font-size: 20px;
-    transition: all 0.5s ease-in-out;
-    color: rgb(163, 84, 236);
-}
-
 .botao {
     cursor: pointer;
     border: 0;
     border-radius: 15px;
     color: #ffffff;
-    background-color: rgb(237, 230, 28);
+    background-color: rgb(150, 146, 31);
     font-weight: 700;
     font-size: 18px;
     align-self: center;
     height: 40px;
     width: 140px;
-    margin-top: -16px;
-    margin-right: 100px;
+    margin-top: -5px;
+    margin-right: 5px;
+    text-align: center;
 }
 .cadastro_link {
    
     text-align: center; 
     margin-top: 10px; 
+   
 }
 
 .cadastro_link a {
     text-decoration: none;
     font-weight: normal; 
-    color: rgb(163, 84, 236);
+    color: rgb(183, 44, 44);
 }
 .cadastro_link a:hover {
     color: rgb(100, 226, 226);
@@ -172,7 +129,7 @@ header a:hover {
 
 
 .input_cadastro {
-    border: 2px solid rgb(106, 245, 245);
+    border: 2px solid rgb(150, 146, 31);
     text-align: center;
     border-radius: 15px;
     margin: 10;
@@ -206,11 +163,12 @@ div {
 .icone {
     display: flex;
     align-items: center;
+    
 }
 
 .icone img {
     margin-right: 7px;
-    color: #fff;
+    color: #ffffff;
     cursor: url('cursor\ pointer.png'), auto !important;
     margin-top: 6px;
     display: flex;
@@ -219,23 +177,22 @@ div {
 
 
 .icone p {
-    color: #fff;
+    background-color: #000000;
     font-size: 18px;
     font-weight: bold;
 }
 
 footer {
-    /* background-color: rgb(106, 245, 245); */
-    background: linear-gradient(180deg, #B3EFFF 0%, #4cb9eb 100%);
-
-    width: 98.5%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    filter: drop-shadow(0 8px 20px rgba(8, 99, 91, 0.5));
-    margin-top: 10%;
     
+    background: linear-gradient(180deg, #000000 0%, #000000 100%);
+    color: black;
+    width: 99.5%;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    margin-top: 100px;
+    position: absolute;
 }
 
 footer img{
